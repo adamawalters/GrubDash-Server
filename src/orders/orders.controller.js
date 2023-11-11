@@ -32,9 +32,9 @@ function readOrder(req, res) {
 }
 
 function updateOrder(req, res) {
-    const {order} = res.locals; //comes from orderExists
-    const {deliverTo, mobileNumber, dishes} = res.locals; //comes from bodyHasProperty
-    const {status} = res.locals; //comes from statusIsValid
+    const {order} = res.locals; //comes from orderExists (order found from url)
+    const {deliverTo, mobileNumber, dishes} = res.locals; //comes from bodyHasProperty (body)
+    const {status} = res.locals; //comes from statusIsValid (body) 
     order.deliverTo = deliverTo;
     order.mobileNumber = mobileNumber;
     order.dishes = dishes;
